@@ -20,8 +20,8 @@ def initialize_model():
     global yolo_model, fallback_model
     try:
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        yolo_model = YOLO(r"C:\Users\garvk\OneDrive - Bhagwan Parshuram Institute of Technology\Desktop\advance_projects\candice\runs\detect\yolo11s_finetuned4\weights\last.pt")
-        fallback_model = YOLO(r"C:\Users\garvk\OneDrive - Bhagwan Parshuram Institute of Technology\Desktop\advance_projects\candice\runs\detect\yolo11s_finetuned4\weights\best.pt")
+        yolo_model = YOLO(r"C:\Users\garvk\OneDrive - Bhagwan Parshuram Institute of Technology\Desktop\advance_projects\candice\runs\detect\yolo11s_finetuned_final_model\weights\last.pt")
+        fallback_model = YOLO(r"C:\Users\garvk\OneDrive - Bhagwan Parshuram Institute of Technology\Desktop\advance_projects\candice\runs\detect\yolo11s_finetuned_phase2\weights\last.pt")
         yolo_model.to(device)
         fallback_model.to(device)
         return True
